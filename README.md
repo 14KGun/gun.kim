@@ -1,32 +1,19 @@
-# React + TypeScript + Vite
+# gun.kim
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+김건 (Geon Kim) 개인 CV 사이트. React + TypeScript + Vite.
 
-Currently, two official plugins are available:
+## 개발
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```sh
+pnpm install
+pnpm dev      # 개발 서버
+pnpm build    # 프로덕션 빌드 (dist/)
+pnpm lint     # oxlint
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 구조
+
+- `src/data.ts` — 경력, 학력, 기술, 프로젝트, 수상, 활동, 연락처 데이터
+- `src/App.tsx` — 페이지 레이아웃
+- `src/App.css`, `src/index.css` — 스타일 (색상 토큰은 `index.css`의 `:root`)
+- `src/assets/` — 커버 사진, 프로필 이미지
